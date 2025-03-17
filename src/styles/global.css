@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primery-dark: #1D1D1D;
+  --color-primery-light: #F5F5F5;
+
+}
+
+/* @font-face{
+  font-family: 'Poppins';
+  src: url('');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: #f3ecec;
+}
+
+ul {
+  list-style-type: disc; /* Viñetas */
+  margin-left: 20px;
+}
+
+ol {  
+  list-style-type: decimal; /* Números */
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 5px; /* Espaciado entre elementos */
+}
+
