@@ -1,13 +1,10 @@
-import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "github-markdown-css"; // Manteniendo los estilos de markdown-body
+import "github-markdown-css";
 
-function MarkdownEditor() {
-  const [markdown, setMarkdown] = useState("");
-
+function MarkdownEditor({ markdown, onContentChange }) {
   const handleInputChange = (event) => {
-    setMarkdown(event.target.value);
+    onContentChange(event.target.value); 
   };
 
   return (
@@ -16,14 +13,11 @@ function MarkdownEditor() {
       <textarea
         value={markdown}
         onChange={handleInputChange}
-        className="w-1/2 h-full p-8 text-base resize-none border-none outline-none"
-        placeholder="Escribe tu Markdown aquí..."
+        className="w-1/2 h-full p-8 text-base resize-none border-none outline-none bg-[#090c10] text-[#fff]"
+        placeholder="Typing Markdown here..."
       />
-
       {/* Vista previa */}
-      <div
-        className={`markdown-body w-1/2 p-8 overflow-y-auto`}
-      >
+      <div className="markdown-body w-1/2 p-8 overflow-y-auto">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
       </div>
     </div>
@@ -31,3 +25,4 @@ function MarkdownEditor() {
 }
 
 export default MarkdownEditor;
+
