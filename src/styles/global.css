@@ -4,6 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   background: #f3ecec;
+  overflow: hidden;
 }
 
 ul {
@@ -20,26 +21,24 @@ li {
   margin-bottom: 5px;
 }
 
-.tabs-container::-webkit-scrollbar {
-  height: 3px; 
+.tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap; /* Mantener las pestañas en una fila */
+  overflow-x: auto; /* Habilitar desplazamiento horizontal */
+  scrollbar-width: none; /* Oculta el scroll (Firefox) */
 }
 
-.tabs-container::-webkit-scrollbar-track {
-  background: #20263b; 
-  border-radius: 3px;
+.tabs-container::-webkit-scrollbar {
+  visibility: hidden; 
 }
+
 
 .tabs-container::-webkit-scrollbar-thumb {
-  background: #8c90aa; 
-  border-radius: 3px;
+  background: #6c718f; /* Color de la barrita */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
-.tabs-container {
-  scrollbar-width: thin; 
-  scrollbar-color: #6c718f #24293d; 
-}
-
-.tabs-container {
-  flex: 1 1 auto; 
-  min-width: 0; 
+.avr{
+  scrollbar-color: #9f9f9f #2c2c2c; 
 }
