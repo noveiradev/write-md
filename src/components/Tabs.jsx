@@ -1,21 +1,37 @@
-import { useState } from "react";
-import close from '../assets/images/close.svg';
-import plus from '../assets/images/plus.svg';
+import { useRef } from "react"; 
+import close from "../assets/images/close.svg";
+import file from "../assets/images/file-earmark-plus.svg";
 
 function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
+  const tabsContainerRef = useRef(null); 
+  const lastTabRef = useRef(null); 
+
   const handleAddTab = () => {
     const newId = tabs.length + 1;
     const newTab = { id: newId, title: "Document", content: "" };
     setTabs([...tabs, newTab]);
     setActiveTabId(newId);
+
+    setTimeout(() => {
+      lastTabRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 0);
   };
 
   const handleDeleteTab = (id) => {
-    const updatedTabs = tabs.filter((tab) => tab.id !== id);
-    setTabs(updatedTabs);
-    if (activeTabId === id && updatedTabs.length > 0) {
-      const nextActiveTab = updatedTabs[0];
-      setActiveTabId(nextActiveTab.id);
+    if (tabs.length === 1) {
+    
+      const newTab = { id: 1, title: "Document", content: "" };
+      setTabs([newTab]);
+      setActiveTabId(1);
+    } else {
+
+      const updatedTabs = tabs.filter((tab) => tab.id !== id);
+      setTabs(updatedTabs);
+
+      if (activeTabId === id && updatedTabs.length > 0) {
+        const nextActiveTab = updatedTabs[0];
+        setActiveTabId(nextActiveTab.id);
+      }
     }
   };
 
@@ -24,11 +40,23 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
   };
 
   return (
-    <div className="flex items-center justify-between flex-grow">
-      <div className="tabs-container w-2xs flex gap-2 flex-grow mx-2 overflow-x-auto scrollbar-hide">
-        {tabs.map((tab) => (
+    <section
+      ref={tabsContainerRef}
+      className="flex items-center justify-between flex-grow bg-[#232e59] "
+    >
+      <button
+        className="px-4 flex gap-1 py-1 text-sm text-[#f6f7ff] font-semibold hover:underline pl-4 cursor-pointer"
+        onClick={handleAddTab}
+      >
+        <img src={file} className="w-5" />
+        New Tab
+      </button>
+
+      <article className="tabs-container w-2xs flex gap-2 flex-grow mx-2 overflow-x-auto scrollbar-hide">
+        {tabs.map((tab, index) => (
           <button
             key={tab.id}
+            ref={index === tabs.length - 1 ? lastTabRef : null} 
             className={`flex p-1.5 text-sm bg-[#37436F] rounded-xs ${
               activeTabId === tab.id
                 ? "text-[#dce0ff] border-b-2 border-[#687AFB]"
@@ -47,16 +75,8 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
             />
           </button>
         ))}
-      </div>
-
-      <button
-        className="px-4 flex py-1 text-sm text-[#687AFB] font-semibold hover:underline pl-4"
-        onClick={handleAddTab}
-      >
-        <img src={plus} className="w-8" />
-        New Tab
-      </button>
-    </div>
+      </article>
+    </section>
   );
 }
 
