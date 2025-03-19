@@ -8,19 +8,17 @@ function MarkdownEditor({ markdown, onContentChange }) {
   };
 
   return (
-    <div className="flex h-[calc(100vh-5rem)]">
-      {/* Área para escribir */}
+    <section className="flex h-[calc(100vh-5rem)]">
       <textarea
         value={markdown}
         onChange={handleInputChange}
-        className="w-1/2 h-full p-8 text-base resize-none border-none outline-none bg-[#090c10] text-[#fff]"
+        className="w-1/2 h-full p-8 text-base resize-none border-none outline-none bg-[#090c10] text-[#fff] avr"
         placeholder="Typing Markdown here..."
       />
-      {/* Vista previa */}
-      <div className="markdown-body w-1/2 p-8 overflow-y-auto">
+      <article className="markdown-body w-1/2 p-8 overflow-y-auto">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 }
 
