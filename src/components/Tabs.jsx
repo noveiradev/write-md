@@ -66,6 +66,7 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
             <img
               src={close}
               className="ml-2 w-3 cursor-pointer"
+              alt="Closed icon"
               onClick={(e) => {
                 e.stopPropagation();
                 handleDeleteTab(tab.id);
