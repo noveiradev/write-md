@@ -2,7 +2,7 @@
 
 **WriteMD** is a modern, user-friendly Markdown editor that allows you to write and preview your content in real-time. Designed with efficiency and simplicity in mind, it's perfect for creating blogs, taking notes, or formatting text for various platforms.
 
-![WriteMD Logo](https://github.com/noveiradev/write-md/blob/master/src/assets/images/logo.svg)
+![WriteMD Logo](https://github.com/noveiradev/write-md/blob/master/src/assets/icons/logo.svg)
 
 ## ✨ Features
 
