@@ -44,7 +44,7 @@ function App() {
   }, [tabs, activeTabId]);
 
   return (
-    <section className="flex flex-col h-screen">
+     <section className="flex flex-col h-screen">
       <Header
         tabs={tabs}
         activeTabId={activeTabId}
@@ -56,7 +56,7 @@ function App() {
         markdown={activeTabContent}
         onContentChange={handleContentChange}
       />
-    </section>
+    </section> 
   );
 }
 
