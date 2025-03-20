@@ -12,7 +12,7 @@ function MarkdownEditor({ markdown, onContentChange }) {
       <textarea
         value={markdown}
         onChange={handleInputChange}
-        className="w-full h-1/2 p-4 text-base resize-none border-none outline-none bg-[#090c10] text-[#fff] sm:w-1/2 sm:h-full avr"
+        className="w-full h-1/2 p-4 text-base resize-none border-none outline-none bg-[#090C10] text-[#FFFFFF] sm:w-1/2 sm:h-full avr"
         placeholder="Typing Markdown here..."
       />
       <article className="markdown-body w-full h-1/2 p-4 pb-10 overflow-y-auto sm:w-1/2 sm:h-full">

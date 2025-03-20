@@ -40,10 +40,10 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
   return (
     <section
       ref={tabsContainerRef}
-      className="flex items-center justify-between flex-grow bg-[#232e59] px-2 sm:px-5" 
+      className="flex items-center justify-between flex-grow bg-[#232E59] px-2 sm:px-5" 
     >
       <button
-        className="flex items-center gap-1 text-sm text-[#f6f7ff] font-semibold hover:underline pl-1 cursor-pointer"
+        className="flex items-center gap-1 text-sm text-[#F6F7FF] font-semibold hover:underline pl-1 cursor-pointer"
         onClick={handleAddTab}
       >
         <img src={file} className="w-5" alt="Add tab icon" />
@@ -57,7 +57,7 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
             ref={index === tabs.length - 1 ? lastTabRef : null} 
             className={`flex p-1.5 text-sm bg-[#37436F] rounded-xs ${
               activeTabId === tab.id
-                ? "text-[#dce0ff] border-b-2 border-[#687AFB]"
+                ? "text-[#DCE0FF] border-b-2 border-[#687AFB]"
                 : "text-[#FFFFFFE3]"
             }`}
             onClick={() => handleTabChange(tab.id)}
