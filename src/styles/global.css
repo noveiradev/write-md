@@ -3,7 +3,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  background: #f3ecec;
   overflow: hidden;
 }
 
@@ -24,19 +23,18 @@ li {
 .tabs-container {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: nowrap; /* Mantener las pestañas en una fila */
-  overflow-x: auto; /* Habilitar desplazamiento horizontal */
-  scrollbar-width: none; /* Oculta el scroll (Firefox) */
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  scrollbar-width: none; 
 }
 
 .tabs-container::-webkit-scrollbar {
   visibility: hidden; 
 }
 
-
 .tabs-container::-webkit-scrollbar-thumb {
-  background: #6c718f; /* Color de la barrita */
-  border-radius: 10px; /* Bordes redondeados */
+  background: #6c718f; 
+  border-radius: 10px; 
 }
 
 .avr{

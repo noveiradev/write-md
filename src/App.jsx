@@ -38,7 +38,6 @@ function App() {
     return "Document";
   };
 
-  // Guardar en localStorage cuando las pestañas cambien
   useEffect(() => {
     localStorage.setItem("tabs", JSON.stringify(tabs));
     localStorage.setItem("activeTabId", JSON.stringify(activeTabId));

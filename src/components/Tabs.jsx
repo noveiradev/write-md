@@ -1,6 +1,6 @@
 import { useRef } from "react"; 
-import close from "../assets/images/close.svg";
-import file from "../assets/images/file-earmark-plus.svg";
+import close from "../assets/icons/close.svg";
+import file from "../assets/icons/file-earmark-plus.svg";
 
 function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
   const tabsContainerRef = useRef(null); 
@@ -19,12 +19,10 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
 
   const handleDeleteTab = (id) => {
     if (tabs.length === 1) {
-    
       const newTab = { id: 1, title: "Document", content: "" };
       setTabs([newTab]);
       setActiveTabId(1);
     } else {
-
       const updatedTabs = tabs.filter((tab) => tab.id !== id);
       setTabs(updatedTabs);
 
@@ -42,17 +40,17 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
   return (
     <section
       ref={tabsContainerRef}
-      className="flex items-center justify-between flex-grow bg-[#232e59] "
+      className="flex items-center justify-between flex-grow bg-[#232e59] px-2 sm:px-5" 
     >
       <button
-        className="px-4 flex gap-1 py-1 text-sm text-[#f6f7ff] font-semibold hover:underline pl-4 cursor-pointer"
+        className="flex items-center gap-1 text-sm text-[#f6f7ff] font-semibold hover:underline pl-1 cursor-pointer"
         onClick={handleAddTab}
       >
-        <img src={file} className="w-5" />
-        New Tab
+        <img src={file} className="w-5" alt="Add tab icon" />
+        <span className="hidden sm:block">New Tab</span> 
       </button>
 
-      <article className="tabs-container w-2xs flex gap-2 flex-grow mx-2 overflow-x-auto scrollbar-hide">
+      <article className="tabs-container w-2xs flex gap-3 flex-grow mx-2 overflow-x-auto scrollbar-hide">
         {tabs.map((tab, index) => (
           <button
             key={tab.id}
@@ -81,5 +79,4 @@ function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
 }
 
 export default Tabs;
-
 

@@ -1,86 +1,89 @@
-const welcomeContent = `# Bienvenido a WriteMD
+const welcomeContent = `# Welcome to WriteMD
 
-👋 ¡Hola! te doy la bienvenida a WriteMD, un editor de Markdown que he creado para que puedas escribir y previsualizar tu contenido en tiempo real de manera sencilla y eficiente. 
+👋 Hello! Welcome to WriteMD, a Markdown editor I’ve created so you can write and preview your content in real time, easily and efficiently.
 
-## ⚙️ Funcionalidades principales:
-- Escribe Markdown en el panel izquierdo y observa cómo se transforma en contenido formateado.
+## ⚙️ Main Features:
+- Write Markdown in the left panel and watch how it transforms into formatted content.
+- See the result of your Markdown instantly in the right panel.
+- Organize your work with multiple tabs. Create, edit, or delete tabs as needed!
+- Your changes are automatically saved, so you never lose your progress.
 
-- Ve el resultado de tu Markdown al instante en el panel derecho.
+## What is Markdown?
+Markdown is a lightweight markup language that’s simple and easy to use. It’s perfect for:
+- Creating well-structured documents.
+- Writing blogs or articles.
+- Taking technical or personal notes.
+- Formatting text for platforms like GitHub, Reddit, or Slack.
 
-- Organiza tu trabajo con múltiples pestañas ¡Crea, edita o elimina según tus necesidades!
+## 🚀 Quick Markdown Examples
+### Headings
 
-- Tus cambios se guardan automáticamente, para que nunca pierdas tu progreso.
-
-## ¿Qué es Markdown?
-Markdown es un lenguaje de marcado ligero y fácil de usar. Es perfecto para:
-
-- Crear documentos bien estructurados.
-
-- Escribir blogs o artículos.
-
-- Tomar notas técnicas o personales.
-
-- Formatear texto para plataformas como GitHub, Reddit o Slack.
-
-## 🚀 Ejemplos rápidos de Markdown
-### Encabezados
-
-# Título H1
-## Título H2
-### Título H3
-#### Título H4
+# Title H1
+## Title H2
+### Title H3
+#### Title H4
 
 ---
 
-## Texto básico
+## Basic Text
 
-- **Negrita**: \`**texto en negrita**\`
-- *Itálica*: \`*texto en itálica*\`
-- ~~Tachado~~: \`~~texto tachado~~\`
+- **Bold**: \`**bold text**\`
+- *Italic*: \`*italic text*\`
+- ~~Strikethrough~~: \`~~strikethrough text~~\`
 
-### Listas
+### Lists
 
-- Lista desordenada:
-  - Elemento 
-  - Elemento 
+- Unordered list:
+  - Item
+  - Item
 
-1. Lista ordenada:
-   1. Primer elemento
-   2. Segundo elemento
+1. Ordered list:
+   1. First item
+   2. Second item
 
-## Enlaces e imágenes
+## Links and Images
 
-[Enlace a mi Github](https://www.google.com)
-#### Logo de WriteMD
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+[Link to my Github](https://www.google.com)
 
-## Código
+![WriteMD Logo](https://github.com/noveiradev/write-md/blob/master/src/assets/images/logo.svg)
 
-- En línea: \`console.log("Hola, mundo");\`
-- En bloque:
+## Code
+
+- Inline: \`console.log("Hello, world");\`
+- Block:
   \`\`\`javascript
-  function saludar() {
-    console.log("¡Hola, mundo desde WriteMD!");
+  function greet() {
+    console.log("Hello, world!");
   }
   \`\`\`
 
-### Tablas
+### Tables
 
-| Nombre  | Edad | Ciudad     |
-|---------|------|------------|
-| Juan    | 25   | Madrid     |
-| María   | 30   | Barcelona  |
+#### Example Table
 
-# 💜 ¡Apóyame!
+| Product       | Category       | Price  | Availability     |
+|---------------|----------------|--------|------------------|
+| Laptop Pro X  | Electronics    | $999   | In stock         |
+| Gamer Chair Z | Furniture       | $199   | On backorder     |
+| Headphones Y  | Accessories    | $49    | In stock         |
+| Smartphone XL | Electronics    | $799   | Out of stock     |
+| Urban Backpack| Fashion         | $79    | In stock         |
 
-Si te gusta lo que ves, ¡me encantaría contar con tu apoyo! 🚀
+# 💜 Support Me!
 
-⭐ Si WriteMD te resulta útil, dale una estrella en mi repositorio de [Github](https://github.com/noveiradev/write-md). ¡Significaría mucho para mí!
+If you like what you see, I’d love to have your support! 🚀
 
-🛠️ Si tienes ideas, sugerencias o quieres colaborar, ¡no dudes en abrir un issue o enviar un pull request! Estoy abierta a mejoras y nuevas funcionalidades.
+⭐ If you find WriteMD useful, give it a star on my [Github repository](https://github.com/noveiradev/write-md). It would mean the world to me!
 
-🐛 ¿Encontraste un bug? ¡Házmelo saber! Quiero que WriteMD sea lo más estable y útil posible.
+🛠️ If you have ideas, suggestions, or want to collaborate, feel free to send a pull request! I’m open to improvements and new features.
+
+🐛 Found a bug? Let me know! I want WriteMD to be as stable and useful as possible.
+
+---
+
+_Crafted with💜 by [noveiradev](https://github.com/noveiradev)_
 `;
 
 export default welcomeContent;
+
 
