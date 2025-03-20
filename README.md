@@ -42,9 +42,6 @@ Follow these steps to run WriteMD locally:
 4. Start the development server:
    ```bash
    npm start
-5. Open your browser and navigate to:
-   ```bash
-   http://localhost:3000 
 ---
 
 ## 💜 Support Me!
