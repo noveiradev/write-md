@@ -45,7 +45,6 @@ Markdown is a lightweight markup language that’s simple and easy to use. It’
 
 [Link to my Github](https://www.google.com)
 
-![WriteMD Logo](https://github.com/noveiradev/write-md/blob/master/src/assets/images/logo.svg)
 
 ## Code
 
