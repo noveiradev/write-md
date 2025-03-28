@@ -1,5 +1,5 @@
-import Logo from '../assets/icons/logo.svg';
-import logoGithub from '../assets/icons/github.svg';
+import Logo from '@/assets/icons/logo.svg';
+import logoGithub from '@/assets/icons/github.svg';
 import Tabs from './Tabs';
 import { Fade } from 'react-awesome-reveal';
 

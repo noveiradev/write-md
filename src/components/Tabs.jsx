@@ -1,6 +1,6 @@
 import { useRef } from "react"; 
-import close from "../assets/icons/close.svg";
-import file from "../assets/icons/file-earmark-plus.svg";
+import close from "@/assets/icons/close.svg";
+import file from "@/assets/icons/file-earmark-plus.svg";
 
 function Tabs({ tabs, activeTabId, onContentChange, setActiveTabId, setTabs }) {
   const tabsContainerRef = useRef(null); 
